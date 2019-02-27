@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>LIST COMPONENT</h2>
+
+<div data-sly-use.lmc="com.test.e1.core.models.ListComponentModel">
+
+           <b>Display text : ${lmc.ddtext}</b>
+
+</div>
+
+
+<div data-sly-test="${properties.country == 'PAKISTAN'}">
+<sly data-sly-include = "pak.html" />
+</div>
+
+<div data-sly-test="${properties.country == 'INDIA'}">
+<sly data-sly-include = "india.html" />
+</div>
+
+
+<div data-sly-test="${properties.country == 'USA'}">
+<sly data-sly-include = "usa.html" />
+</div>
+
+
+</body>
+</html> 
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/CricketScoreApp"/>
+    <filter root="/content/CricketScoreApp"/>
+    <filter root="/content/dam/CricketScoreApp"/>
+</workspaceFilter>

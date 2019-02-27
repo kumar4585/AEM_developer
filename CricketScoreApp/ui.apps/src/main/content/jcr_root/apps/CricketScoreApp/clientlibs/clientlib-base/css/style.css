@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+
+  color: green;
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.pic{
+width:100%;
+    height:20%;
+}

@@ -1,0 +1,10 @@
+<b> ${properties.heading}
+</b>
+<div data-sly-use.mojo="com.hcl.aem.core.models.Cta_MultiLinks">
+ <div data-sly-list.n="${mojo.links}">
+
+   <li> <a href="${n.pagePath}">${n.linkText}
+</a></li>
+
+  </div>
+</div>

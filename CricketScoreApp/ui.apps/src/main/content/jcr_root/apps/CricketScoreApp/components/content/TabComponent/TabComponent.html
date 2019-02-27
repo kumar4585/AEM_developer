@@ -1,0 +1,20 @@
+ewijoeklk
+
+<div >
+			<sly data-sly-use.convertToJSON="${'script.js'}">
+			<ul >
+				<sly data-sly-list.multival="${convertToJSON.proposerObjs}" data-sly-unwrap>
+						<li><a  href="#${multival.tabId}">${multival.tabHeading}</a></li>
+				</sly>
+			</ul>
+			<div>
+				<sly data-sly-list.multival1="${convertToJSON.proposerObjs}" data-sly-unwrap>
+					<div id="${multival1.tabId}">
+						<h3>${multival1.tabname}</h3>
+						${multival1.first}
+						<p><div data-sly-resource="${'item{0}' @ format=multival1List.count, resourceType='wcm/foundation/components/parsys'}" data-sly-unwrap></div></p>
+					</div>
+				</sly>
+			</div>
+		</sly>
+</div>

@@ -1,0 +1,14 @@
+  CTA_links component
+
+<sly data-sly-use.more="com.hcl.aem.core.models.MF_ExternalPath">
+
+<div data-sly-list.nav="${more.pagePath}">
+   <li>
+<a target="_blank"  href="${nav.pagePath@ context='unsafe'}">text</a>
+  </li>
+
+</div>
+
+
+
+</sly>

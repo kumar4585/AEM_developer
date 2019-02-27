@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="LIST TUI Component"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Carousel">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <list_x0020_section
+                jcr:primaryType="nt:unstructured"
+                jcr:title="list section"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <display_x0020_Text
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Display Text"
+                                name="./ddtext"/>
+                            <Country_x0020_List
+                                granite:class="cq-dialog-dropdown-showhide"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Select country"
+                                name="./country">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <INDIA
+                                        granite:hide="${cqDesign.disableINDIA}"
+                                        jcr:primaryType="nt:unstructured"
+                                        name="./india"
+                                        text="INDIA"
+                                        value="INDIA"/>
+                                    <PAKISTAN
+                                        granite:hide="${cqDesign.disablePAKISTAN}"
+                                        jcr:primaryType="nt:unstructured"
+                                        name="./pak"
+                                        text="PAKISTAN"
+                                        value="PAKISTAN"/>
+                                    <USA
+                                        granite:hide="${cqDesign.disableUSA}"
+                                        jcr:primaryType="nt:unstructured"
+                                        name="./usa"
+                                        text="USA"
+                                        value="USA"/>
+                                </items>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                            </Country_x0020_List>
+                            <Itarget
+                                granite:class="showhidetargets"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <India_x0020_Target
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Select States"
+                                        name="./IS">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <karnataka
+                                                jcr:primaryType="nt:unstructured"
+                                                name="./karnataka"
+                                                text="karnataka"
+                                                value="karnataka"/>
+                                            <andhra_x0020_pradesh
+                                                jcr:primaryType="nt:unstructured"
+                                                name="./ap"
+                                                text="andhra pradesh"
+                                                value="andhra pradesh"/>
+                                            <tamilnadu
+                                                jcr:primaryType="nt:unstructured"
+                                                name="./tn"
+                                                text="tamilnadu"
+                                                value="tamilnadu"/>
+                                        </items>
+                                    </India_x0020_Target>
+                                </items>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    showhidetargetvalue="INDIA"/>
+                            </Itarget>
+                            <ptarget
+                                granite:class="showhidetargets"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <Pakistan_x0020_Target
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Select States"
+                                        name="./PS">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <baluchistan
+                                                jcr:primaryType="nt:unstructured"
+                                                text="baluchistan"
+                                                value="baluchistan"/>
+                                            <punjab
+                                                jcr:primaryType="nt:unstructured"
+                                                text="punjab"
+                                                value="punjab"/>
+                                            <sindh
+                                                jcr:primaryType="nt:unstructured"
+                                                text="sindh"
+                                                value="sindh"/>
+                                        </items>
+                                    </Pakistan_x0020_Target>
+                                </items>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    showhidetargetvalue="PAKISTAN"/>
+                            </ptarget>
+                            <utarget
+                                granite:class="showhidetargets"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <USA_x0020_Target
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Select States"
+                                        name="./AS">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <Texas
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Texas"
+                                                value="Texas"/>
+                                            <california
+                                                jcr:primaryType="nt:unstructured"
+                                                text="california"
+                                                value="california"/>
+                                            <alaska
+                                                jcr:primaryType="nt:unstructured"
+                                                text="alaska"
+                                                value="alaska"/>
+                                        </items>
+                                    </USA_x0020_Target>
+                                </items>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    showhidetargetvalue="USA"/>
+                            </utarget>
+                        </items>
+                    </column>
+                </items>
+            </list_x0020_section>
+        </items>
+    </content>
+</jcr:root>
